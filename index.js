@@ -91,20 +91,5 @@ app.delete("/subscription/:id", async (req, res) => {
 });
 
 app.listen(5000, () => {
-    console.log("Server has started on port 5000");
+    console.log(`Server has started on port ${PORT}`);
 });
-
-// app.get("/subscription/:sub_name", async (req, res) => {
-//     try{
-//         const { sub_name } = req.params;
-//         const subscription = await pool.query("SELECT * FROM subscription_details WHERE sub_name = $1", [sub_name]);
-        
-//         if(subscription.rows.length===0){
-//             return res.status(404).send("subscription not found")
-//         }
-//         res.json(subscription.rows[0]); 
-       
-//     } catch (err) {
-//         console.error(err.message)
-//     }
-// });
