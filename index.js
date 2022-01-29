@@ -8,6 +8,10 @@ app.use(express.json());
 app.use(cors());
 app.use("/auth", require("./routes/jwtAuth"));
 
+app.get("/", async (resq, res) => {
+    res.send("Working!");
+});
+
 //Create a Subscription
 
 app.post("/subscription" , async(req,res) => {
