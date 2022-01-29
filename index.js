@@ -90,6 +90,6 @@ app.delete("/subscription/:id", async (req, res) => {
     }
 });
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log(`Server has started on port ${PORT}`);
 });
