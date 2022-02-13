@@ -8,9 +8,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/auth", require("./routes/jwtAuth"));
 
-// if (process.env.NODE_ENV === "production") {
-//     app.use(express.static())
-// }
+app.get("/", async (resq, res) => {
+    res.send("Working!");
+});
 
 //Create a Subscription
 
