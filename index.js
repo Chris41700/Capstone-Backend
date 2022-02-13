@@ -8,17 +8,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/auth", require("./routes/jwtAuth"));
 
-const isProduction = process.env.NODE_ENV === "production";
-
-const connectionString = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}
-                        :${process.env.PG_PORT}/${process.env.PG_DATABASE}`;
-
-pool = new Pool ({
-    connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
-    ssl: {
-        rejectUnauthorized: false,
-    },
-});
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static())
+// }
 
 //Create a Subscription
 
