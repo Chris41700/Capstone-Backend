@@ -1,5 +1,5 @@
 # Capstone-Backend
-Capstone backend uses NodeJS/ExpressJS with PostgreSQL
+Capstone Project backend uses NodeJS/ExpressJS with PostgreSQL
 ### MVP (Minimum Variable Product)
 - [x] Build a Node/Express server
 - [x] Create a PostgreSQL database and a table
